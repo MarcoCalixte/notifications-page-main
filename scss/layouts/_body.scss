@@ -1,0 +1,498 @@
+@use '../components/colors' as *;
+@use '../components/typography' as *;
+@use '../utils/mixin' as *;
+
+body {
+
+    @include small-screen-mobile {
+        .form-wrapper {
+            // border: 1px solid red;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            min-height: 100vh;
+            font-family: $Font-family;
+
+
+            .form-container {
+                // border: 1px solid red;
+                display: grid;
+                grid-auto-flow: row;
+                justify-content: center;
+                align-items: center;
+                padding-left: 2em;
+                padding-right: 2em;
+                padding-top: 2em;
+                padding-bottom: 1em;
+                border: 1px solid $Very-light-grayish-blue;
+                border-radius: 0.5em;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                width: 100%;
+                max-width: 650px;
+
+                .form-header {
+                    // border: 1px solid red;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.6rem;
+
+                    h1 {
+                        // border: 1px solid rgb(165, 97, 95);
+                        font-weight: $Weight-2;
+                        padding-right: 1ch;
+                        span {
+                            // border: 1px solid red;
+                            padding-left: 0.7rem;
+                            padding-right: 0.7rem;
+                            background-color: $dark-blue;
+                            color: $White;
+                            border-radius: 20%;
+                            font-weight: $Weight-1;
+                            font-size: 17px;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    h3 {
+                        // border: 1px solid red;
+                        color: $Grayish-blue;
+                        font-weight: $Weight-1;
+                        align-self: middle;
+                        font-size: 0.9rem;
+                        text-align: end;
+
+                        &:hover {
+                            cursor: pointer;
+                             color: $dark-blue;
+                        }
+                    }
+
+                }
+
+                .row {
+                    // border: 1px solid red;
+                    padding-top: 1rem;
+
+                    .unread {
+                        background-color: $Very-light-grayish-blue;
+                    }
+
+                    .col:nth-of-type(1) {
+                    border-radius: 0.5rem;
+                    border: 1px solid rgb(243, 243, 243);
+                    padding-left: 0.4rem;
+                    padding-bottom: 1rem;
+                    padding-top: 1rem;
+
+
+                        .form-control-message {
+                        // border: 1px solid red;
+                        font-size: 0.9rem;
+                        color: $Grayish-blue;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        .mark-webber{
+                            width: 100%;
+                            max-width: 50px;
+                            display: block;
+                            padding-right: 0.5rem;
+                            align-self:flex-start;
+                        }
+
+                            aside {
+                            // border: 1px solid blue;
+                            padding-right: 2em;
+                            word-wrap: break-word;
+
+
+                                span:nth-child(1) {
+                                    font-weight: $Weight-2;
+                                    color: $Very-dark-blue;
+                                }
+
+                                span:nth-child(2) {
+                                    // border: 1px solid red;
+                                    font-weight: $Weight-1;
+                                    color: $Dark-grayish-blue;
+
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: $dark-blue;
+                                    }
+
+                                }
+
+
+                                span:nth-child(3) {
+                                    // border: 1px solid red;
+                                    font-size: 0.40rem;
+                                    height: 8px;
+                                    width: 8px;
+                                    background-color:hsl(0, 100%, 43%);
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                }
+
+                                span:last-of-type {
+                                    // border: 1px solid red;
+                                    font-weight: inherit;
+                                    color: $Light-grayish-blue-2;
+                                }
+                            }
+
+                        }
+                    }
+
+
+                    .col:nth-of-type(2) {
+                        border-radius: 0.5rem;
+                        border: 1px solid rgb(243, 243, 243);
+                        padding-left: 0.5rem;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        margin-top: 0.7rem;
+
+                        .form-control-message-angela {
+                            // border: 1px solid red;
+                            font-size: 0.9rem;
+                            color: $Grayish-blue;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            .angela-gray {
+                                width: 100%;
+                                max-width: 50px;
+                                display: block;
+                                padding-right: 0.5rem;
+                            }
+
+                            aside {
+                                // border: 1px solid rgb(0, 208, 255);
+                                word-wrap: break-word;
+
+                                span:nth-child(1) {
+                                    font-weight: $Weight-2;
+                                    color: $Very-dark-blue;
+                                }
+
+                                span:nth-child(2) {
+                                    // border: 1px solid red;
+                                    font-size: 0.40rem;
+                                    height: 8px;
+                                    width: 8px;
+                                    background-color:hsl(0, 100%, 43%);
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                }
+
+                                span:last-of-type {
+                                    // border: 1px solid red;
+                                    font-weight: inherit;
+                                    color: $Light-grayish-blue-2;
+                                }
+                            }
+                        }
+                    }
+
+                    .col:nth-of-type(3) {
+                        border-radius: 0.5rem;
+                        border: 1px solid rgb(243, 243, 243);
+                        padding-left: 0.4rem;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        margin-top: 0.7rem;
+
+
+                        .form-control-message-jacob {
+                             // border: 1px solid red;
+                             font-size: 0.9rem;
+                             color: $Grayish-blue;
+                             display: flex;
+                             justify-content: flex-start;
+                             align-items: center;
+
+
+                             .Jacob-Thompson {
+                                    width: 100%;
+                                    max-width: 50px;
+                                    display: block;
+                                    padding-right: 0.5rem;
+                                    align-self:flex-start;
+                                }
+
+                             aside {
+                                // border: 1px solid rgb(0, 208, 255);
+                                word-wrap: break-word;
+                                padding-right: 2em;
+
+                                span:nth-child(1) {
+                                    font-weight: $Weight-2;
+                                    color: $Very-dark-blue;
+                                }
+
+                                span:nth-child(2) {
+                                    // border: 1px solid red;
+                                    font-weight: $Weight-2;
+                                    color: $dark-blue;
+
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                span:nth-child(3) {
+                                    // border: 1px solid red;
+                                    font-size: 0.40rem;
+                                    height: 8px;
+                                    width: 8px;
+                                    background-color:hsl(0, 100%, 43%);
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                }
+
+                                span:last-of-type {
+                                    // border: 1px solid red;
+                                    font-weight: inherit;
+                                    color: $Light-grayish-blue-2;
+                                }
+                            }
+                        }
+                    }
+
+
+                    .col:nth-of-type(4) {
+                        // background-color: $Very-light-grayish-blue;
+                        border-radius: 0.5rem;
+                        // border: 1px solid rgb(243, 243, 243);
+                        padding-left: 0.4rem;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        margin-top: 0.7rem;
+
+                        .form-control-message-rizky {
+                            // border: 1px solid red;
+                            font-size: 0.9rem;
+                            color: $Grayish-blue;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            .rizky-hasanuddin {
+                                width: 100%;
+                                max-width: 50px;
+                                display: block;
+                                padding-right: 0.5rem;
+                                align-self:flex-start;
+                            }
+
+                            aside {
+                                // border: 1px solid rgb(0, 208, 255);
+                                word-wrap: break-word;
+                                padding-right: 2em;
+
+                                span:nth-child(1) {
+                                    font-weight: $Weight-2;
+                                    color: $Very-dark-blue;
+                                }
+
+                                span:last-of-type {
+                                    // border: 1px solid red;
+                                    font-weight: inherit;
+                                    color: $Light-grayish-blue-2;
+                                }
+
+                                p {
+                                    border: 1px solid $Light-grayish-blue-1;
+                                    border-radius: 0.3em;
+                                    color: $Dark-grayish-blue;
+                                    margin-top: 0.5rem;
+                                    padding-left: 1rem;
+                                    padding-right: 2em;
+                                    padding-bottom: 1em;
+                                    padding-top: 1em;
+                                }
+
+                                p {
+                                    &:hover {
+                                        background-color: $Light-grayish-blue-1;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    .col:nth-of-type(5) {
+                        // background-color: $Very-light-grayish-blue;
+                        border-radius: 0.5rem;
+                        // border: 1px solid rgb(243, 243, 243);
+                        padding-left: 0.4rem;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        margin-top: 0.7rem;
+
+                        .form-control-message-kimberly {
+                            // border: 1px solid red;
+                            font-size: 0.9rem;
+                            color: $Grayish-blue;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            aside {
+                                // border: 1px solid rgb(0, 208, 255);
+                                word-wrap: break-word;
+                                display:flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+
+                                .kimberly-smith {
+                                    // border: 1px solid red;
+                                    width: 100%;
+                                    max-width: 50px;
+                                    padding-right: 0.5rem;
+                                    align-self:flex-start;
+                                }
+
+                                article {
+                                        padding-right: 2em;
+
+                                        span:nth-of-type(1) {
+                                        // border: 1px solid rgb(0, 208, 255);
+                                        font-weight: $Weight-2;
+                                        color: $Very-dark-blue;
+                                    }
+
+                                        .one-week-ago {
+                                            // border: 1px solid red;
+                                            font-weight: inherit;
+                                            color: $Light-grayish-blue-2;
+                                        }
+                                }
+
+                                img {
+                                    width: 100%;
+                                    max-width: 40px;
+                                }
+
+                            }
+
+                            .chess-web {
+                                width: 50px;
+                                padding-right: 0.5rem;
+                                display: block;
+                                align-self:flex-start;
+                            }
+
+                        }
+
+                    }
+
+                    .col:nth-of-type(6) {
+                         // background-color: $Very-light-grayish-blue;
+                         border-radius: 0.5rem;
+                         // border: 1px solid rgb(243, 243, 243);
+                         padding-left: 0.4rem;
+                         padding-bottom: 1rem;
+                         padding-top: 1rem;
+                         margin-top: 0.7rem;
+
+                         .form-control-message-nathan {
+                            // border: 1px solid red;
+                            font-size: 0.9rem;
+                            color: $Grayish-blue;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .nathan-peterson {
+                                width: 100%;
+                                max-width: 50px;
+                                display: block;
+                                padding-right: 0.5rem;
+                                align-self:flex-start;
+                            }
+
+                            aside {
+                                // border: 1px solid red;
+                                padding-right: 2em;
+                                span:nth-child(1) {
+                                    font-weight: $Weight-2;
+                                    color: $Very-dark-blue;
+                                }
+
+                                span:nth-child(2) {
+                                    // border: 1px solid red;
+                                    font-weight: 500;
+                                    color: $Dark-grayish-blue;
+                                }
+
+                                p{
+                                    // border: 1px solid red;
+                                    font-weight: inherit;
+                                    color: $Light-grayish-blue-2;
+                                }
+                            }
+
+                         }
+                    }
+
+                    .col:nth-of-type(7) {
+                        display: flex;
+                        // background-color: $Very-light-grayish-blue;
+                        border-radius: 0.5rem;
+                        // border: 1px solid rgb(243, 243, 243);
+                        padding-left: 0.4rem;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        margin-top: 0.7rem;
+
+                        .anna-kim {
+                            width: 100%;
+                            max-width: 50px;
+                            display: block;
+                            padding-right: 0.5rem;
+                            align-self:flex-start;
+                        }
+
+                        aside {
+                            // border: 1px solid red;
+
+                            span:nth-child(1) {
+                                font-weight: $Weight-2;
+                                color: $Very-dark-blue;
+                            }
+
+                            span:nth-child(2) {
+                                font-weight: $Weight-2;
+                                color: $dark-blue;
+                            }
+
+                            p {
+                                font-weight: inherit;
+                                color: $Light-grayish-blue-2;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+          }
+
+          .attribution a {
+            color: hsl(228, 45%, 44%);
+          }
+    }
+
+}

@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+@media (min-width: 50px) and (max-width: 1920px) {
+  body .form-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  body .form-wrapper .form-container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    border: 1px solid hsl(210deg, 60%, 98%);
+    border-radius: 0.5em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 100%;
+    max-width: 650px;
+  }
+  body .form-wrapper .form-container .form-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6rem;
+  }
+  body .form-wrapper .form-container .form-header h1 {
+    font-weight: 800;
+    padding-right: 1ch;
+  }
+  body .form-wrapper .form-container .form-header h1 span {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: hsl(219deg, 85%, 26%);
+    color: hsl(0deg, 0%, 100%);
+    border-radius: 20%;
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 0.5rem;
+  }
+  body .form-wrapper .form-container .form-header h3 {
+    color: hsl(219deg, 14%, 63%);
+    font-weight: 500;
+    align-self: middle;
+    font-size: 0.9rem;
+    text-align: end;
+  }
+  body .form-wrapper .form-container .form-header h3:hover {
+    cursor: pointer;
+    color: hsl(219deg, 85%, 26%);
+  }
+  body .form-wrapper .form-container .row {
+    padding-top: 1rem;
+  }
+  body .form-wrapper .form-container .row .unread {
+    background-color: hsl(210deg, 60%, 98%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) {
+    border-radius: 0.5rem;
+    border: 1px solid rgb(243, 243, 243);
+    padding-left: 0.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message {
+    font-size: 0.9rem;
+    color: hsl(219deg, 14%, 63%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message .mark-webber {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding-right: 0.5rem;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message aside {
+    padding-right: 2em;
+    word-wrap: break-word;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message aside span:nth-child(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message aside span:nth-child(2) {
+    font-weight: 500;
+    color: hsl(219deg, 12%, 42%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message aside span:nth-child(2):hover {
+    cursor: pointer;
+    color: hsl(219deg, 85%, 26%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message aside span:nth-child(3) {
+    font-size: 0.4rem;
+    height: 8px;
+    width: 8px;
+    background-color: hsl(0deg, 100%, 43%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(1) .form-control-message aside span:last-of-type {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) {
+    border-radius: 0.5rem;
+    border: 1px solid rgb(243, 243, 243);
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0.7rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) .form-control-message-angela {
+    font-size: 0.9rem;
+    color: hsl(219deg, 14%, 63%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) .form-control-message-angela .angela-gray {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding-right: 0.5rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) .form-control-message-angela aside {
+    word-wrap: break-word;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) .form-control-message-angela aside span:nth-child(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) .form-control-message-angela aside span:nth-child(2) {
+    font-size: 0.4rem;
+    height: 8px;
+    width: 8px;
+    background-color: hsl(0deg, 100%, 43%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(2) .form-control-message-angela aside span:last-of-type {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) {
+    border-radius: 0.5rem;
+    border: 1px solid rgb(243, 243, 243);
+    padding-left: 0.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0.7rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob {
+    font-size: 0.9rem;
+    color: hsl(219deg, 14%, 63%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob .Jacob-Thompson {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding-right: 0.5rem;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob aside {
+    word-wrap: break-word;
+    padding-right: 2em;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob aside span:nth-child(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob aside span:nth-child(2) {
+    font-weight: 800;
+    color: hsl(219deg, 85%, 26%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob aside span:nth-child(2):hover {
+    cursor: pointer;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob aside span:nth-child(3) {
+    font-size: 0.4rem;
+    height: 8px;
+    width: 8px;
+    background-color: hsl(0deg, 100%, 43%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(3) .form-control-message-jacob aside span:last-of-type {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) {
+    border-radius: 0.5rem;
+    padding-left: 0.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0.7rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky {
+    font-size: 0.9rem;
+    color: hsl(219deg, 14%, 63%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky .rizky-hasanuddin {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding-right: 0.5rem;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky aside {
+    word-wrap: break-word;
+    padding-right: 2em;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky aside span:nth-child(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky aside span:last-of-type {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky aside p {
+    border: 1px solid hsl(211deg, 68%, 94%);
+    border-radius: 0.3em;
+    color: hsl(219deg, 12%, 42%);
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(4) .form-control-message-rizky aside p:hover {
+    background-color: hsl(211deg, 68%, 94%);
+    cursor: pointer;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) {
+    border-radius: 0.5rem;
+    padding-left: 0.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0.7rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly {
+    font-size: 0.9rem;
+    color: hsl(219deg, 14%, 63%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly aside {
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly aside .kimberly-smith {
+    width: 100%;
+    max-width: 50px;
+    padding-right: 0.5rem;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly aside article {
+    padding-right: 2em;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly aside article span:nth-of-type(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly aside article .one-week-ago {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly aside img {
+    width: 100%;
+    max-width: 40px;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(5) .form-control-message-kimberly .chess-web {
+    width: 50px;
+    padding-right: 0.5rem;
+    display: block;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) {
+    border-radius: 0.5rem;
+    padding-left: 0.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0.7rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) .form-control-message-nathan {
+    font-size: 0.9rem;
+    color: hsl(219deg, 14%, 63%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) .form-control-message-nathan .nathan-peterson {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding-right: 0.5rem;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) .form-control-message-nathan aside {
+    padding-right: 2em;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) .form-control-message-nathan aside span:nth-child(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) .form-control-message-nathan aside span:nth-child(2) {
+    font-weight: 500;
+    color: hsl(219deg, 12%, 42%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(6) .form-control-message-nathan aside p {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(7) {
+    display: flex;
+    border-radius: 0.5rem;
+    padding-left: 0.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 0.7rem;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(7) .anna-kim {
+    width: 100%;
+    max-width: 50px;
+    display: block;
+    padding-right: 0.5rem;
+    align-self: flex-start;
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(7) aside span:nth-child(1) {
+    font-weight: 800;
+    color: hsl(224deg, 21%, 14%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(7) aside span:nth-child(2) {
+    font-weight: 800;
+    color: hsl(219deg, 85%, 26%);
+  }
+  body .form-wrapper .form-container .row .col:nth-of-type(7) aside p {
+    font-weight: inherit;
+    color: hsl(206deg, 21%, 85%);
+  }
+  body .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  body .attribution a {
+    color: hsl(228deg, 45%, 44%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
